@@ -1,0 +1,63 @@
+{
+  "private": true,
+  "name": "@tv4/web",
+  "description": "Video player web",
+  "author": "Robert Harbul <robert.harbul@gmail.com> (https://probablyweb.dev)",
+  "version": "1.0.0",
+  "bugs": "https://github.com/probwebdev/video-player-codetest/issues",
+  "license": "MIT",
+  "keywords": [
+    "reactjs",
+    "nextjs",
+    "typescript"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "start": "next start",
+    "export": "next build && next export",
+    "build": "next build",
+    "build:analyze": "ANALYZE=true pnpm build",
+    "lint:format": "prettier --check './**/*.{js,jsx,ts,tsx,md,mdx,html,css,json}'",
+    "lint:css": "stylelint './src/**/*.css'",
+    "lint:js": "eslint './**/*.{js,jsx,ts,tsx}'"
+  },
+  "dependencies": {
+    "@tv4/api": "workspace:^",
+    "@trpc/client": "^10.38.3",
+    "@trpc/next": "^10.38.3",
+    "classnames": "^2.3.2",
+    "next": "~13.5.1",
+    "react": "~18.2.0",
+    "react-dom": "~18.2.0",
+    "sharp": "^0.32.6"
+  },
+  "devDependencies": {
+    "@acme/eslint-config": "workspace:^",
+    "@acme/lint-staged-config": "workspace:^",
+    "@acme/prettier-config": "workspace:^",
+    "@acme/stylelint-config": "workspace:^",
+    "@acme/ts-config": "workspace:^",
+    "@next/bundle-analyzer": "~13.5.1",
+    "@next/eslint-plugin-next": "~13.5.1",
+    "autoprefixer": "^10.4.15",
+    "browserslist": "^4.21.10",
+    "eslint-config-next": "~13.5.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "postcss": "~8.4.30",
+    "postcss-import": "^15.1.0",
+    "postcss-nesting": "^12.0.1",
+    "postcss-preset-env": "^9.1.4",
+    "typescript": "~5.2.2"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not ie <= 11",
+    "not dead"
+  ],
+  "volta": {
+    "extends": "../../package.json"
+  }
+}
