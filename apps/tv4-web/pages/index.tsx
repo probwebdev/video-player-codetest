@@ -11,7 +11,8 @@ const IndexPage = () => {
     );
   }
 
-  return <div>{data?.message}</div>;
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+  return <div>{data?.panels[0].title}</div>;
 };
 
 export default IndexPage;
