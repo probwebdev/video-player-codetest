@@ -15,6 +15,19 @@
   overflow-y: auto;
   max-width: calc(100vw - 1rem);
 
+  & li {
+    outline: none;
+    padding: 0.25rem;
+    cursor: pointer;
+
+    &:focus,
+    &:active {
+      & picture {
+        outline: var(--tv4-outline-width) solid var(--tv4-outline-color);
+      }
+    }
+  }
+
   @media (min-width: 768px) {
     max-width: calc(100vw - 2rem);
     margin: 0 -2rem;

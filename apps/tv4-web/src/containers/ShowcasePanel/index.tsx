@@ -27,6 +27,11 @@ export const ShowcasePanel = ({
               onClick={() => {
                 onMovieSelected(video);
               }}
+              onKeyDown={(event) => {
+                if (event.code.toLowerCase() === 'enter') {
+                  onMovieSelected(video);
+                }
+              }}
             >
               <Poster title={title} description={description} image={image} />
             </li>
