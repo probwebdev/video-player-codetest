@@ -39,6 +39,7 @@ module.exports = (phase) => {
     nextConfig
   );
 
+  /* Temporarily disable secure headers for prod build
   if (phase !== PHASE_DEVELOPMENT_SERVER) {
     return {
       async headers() {
@@ -52,6 +53,7 @@ module.exports = (phase) => {
       ...config,
     };
   }
+  */
 
   return config;
 };
