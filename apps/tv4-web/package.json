@@ -25,6 +25,7 @@
     "@tv4/api": "workspace:^",
     "@trpc/client": "^10.38.3",
     "@trpc/next": "^10.38.3",
+    "@radix-ui/react-tooltip": "^1.0.6",
     "classnames": "^2.3.2",
     "next": "~13.5.1",
     "react": "~18.2.0",

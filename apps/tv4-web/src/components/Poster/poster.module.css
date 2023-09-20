@@ -7,7 +7,7 @@
 }
 
 .picture {
-  border-radius: 0.5rem;
+  border-radius: var(--tv4-rounded);
   overflow: hidden;
 }
 
