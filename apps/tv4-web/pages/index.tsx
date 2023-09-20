@@ -1,8 +1,7 @@
 import { useState } from 'react';
 
-import { Poster } from '~/components/Poster';
-import { Tooltip } from '~/components/Tooltip';
 import { Video } from '~/components/Video';
+import { ShowcasePanel } from '~/containers/ShowcasePanel';
 import { trpc } from '~/utils/trpc';
 
 const IndexPage = () => {
@@ -23,29 +22,14 @@ const IndexPage = () => {
     <div className="showcase">
       <Video src={currentMovie ?? ''} />
       {data?.panels.map(({ title, items }) => (
-        <section key={title} className="showcase-section">
-          <h2>{title}</h2>
-          <ul key={title} className="list">
-            {items.map(({ id, title, description, image, video }) => (
-              <Tooltip key={id} text={description}>
-                {/* eslint-disable */}
-                <li
-                  tabIndex={0}
-                  onClick={() => {
-                    setCurrentMovie(video);
-                  }}
-                >
-                  <Poster
-                    title={title}
-                    description={description}
-                    image={image}
-                  />
-                </li>
-                {/* eslint-enable */}
-              </Tooltip>
-            ))}
-          </ul>
-        </section>
+        <ShowcasePanel
+          key={title}
+          title={title}
+          movies={items}
+          onMovieSelected={(src) => {
+            setCurrentMovie(src);
+          }}
+        />
       ))}
     </div>
   );
