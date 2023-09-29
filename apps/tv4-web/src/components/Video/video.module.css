@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  padding: 1rem;
+  background-color: #000;
+  border-radius: var(--tv4-rounded);
+  max-height: 32rem;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
+}
+
+.player {
+  flex: 1 1 auto;
+  object-fit: cover;
+}

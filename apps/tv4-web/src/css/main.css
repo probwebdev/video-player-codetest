@@ -1,0 +1,27 @@
+:root {
+  --tv4-rounded: 0.5rem;
+  --tv4-outline-width: 0.25rem;
+  --tv4-outline-color: #8d45f1;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: #06111f;
+  color: #e4e5e7;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
+}
+
+.showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
